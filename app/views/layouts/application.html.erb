@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>Welcome to Bog Adventure App</h1>
+<a href="../creatures/index">List of all bogs</a> |
+<a href="../creatures/new">Add a new bog</a> |
+<a href="../creatures/show">Find/Edit/Delete a bog</a>
+
+<%= yield %>
+
+</body>
+</html>

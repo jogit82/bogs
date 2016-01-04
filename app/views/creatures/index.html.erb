@@ -1,0 +1,6 @@
+<h3>List of all bogs</h3>
+<ul>
+	<% @creatures.each do |c| %>
+	<li><%= c.name %></li> - <%= c.description %>
+<% end %>
+</ul>
