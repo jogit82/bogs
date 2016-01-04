@@ -1,6 +1,27 @@
 <h3>List of all bogs</h3>
-<ul>
-	<% @creatures.each do |c| %>
-	<li><%= c.name %></li> - <%= c.description %>
+<table>
+<tr>
+	<th><h4>Show</h4></th>
+	<th><h4>Delete</h4></th>
+	<th><h4>Edit</h4></th>
+	<th><h4>Name</h4></th>
+	<th><h4>Description</h4></th>
+	
+</tr>
+<% @creatures.each do |c| %>
+	<tr>	
+		<td><%= link_to "show", creature_path(c), class: 'btn btn-primary btn-sm' %> &nbsp</td>
+		<td><%= link_to "delete", creature_path(c), method: :delete, class: 'btn btn-danger btn-sm' %> &nbsp</td>
+		<td><%= link_to "edit", edit_creature_path(c), class: 'btn btn-success btn-sm' %>&nbsp</td>
+		<td><strong><%= c.name %>&nbsp &nbsp</strong></td>
+		<td><%= c.description %>&nbsp</td>
+	</tr>
+	<tr>
+		<td>&nbsp</td>
+		<td>&nbsp</td>
+		<td>&nbsp</td>
+		<td>&nbsp</td>
+		<td>&nbsp</td>
+	</tr>
 <% end %>
-</ul>
+</table>

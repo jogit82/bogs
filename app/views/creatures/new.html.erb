@@ -1,2 +1,7 @@
-<h1>Creatures#new</h1>
-<p>Find me in app/views/creatures/new.html.erb</p>
+<h1>Add a new bog</h1>
+<%= bootstrap_form_for(@creature) do |c| %>
+  <%= c.text_field :name %>
+  <%= c.text_area :description %>
+  
+  <%= c.submit "Add" %>
+<% end %>
